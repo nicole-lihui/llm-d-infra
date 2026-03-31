@@ -19,6 +19,7 @@ metadata:
 data:
   deployment: |
     spec:
+      replicas: {{ .Values.gateway.gatewayParameters.replicas }}
       template:
         spec:
           containers:

@@ -18,6 +18,8 @@ metadata:
     {{- end }}
 spec:
   kube:
+    deployment:
+      replicas: {{ .Values.gateway.gatewayParameters.replicas }}
     envoyContainer:
       securityContext:
         allowPrivilegeEscalation: false

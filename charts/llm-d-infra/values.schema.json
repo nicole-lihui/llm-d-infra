@@ -179,6 +179,12 @@
                             "required": [],
                             "title": "logLevel"
                         },
+                        "replicas": {
+                            "default": "1",
+                            "description": "Number of replicas for the gateway",
+                            "required": [],
+                            "title": "replicas"
+                        },
                         "resources": {
                             "description": "ResourceRequirements describes the compute resource requirements.",
                             "properties": {

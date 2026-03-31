@@ -114,6 +114,7 @@ Kubernetes: `>= 1.28.0-0`
 | gateway.enabled | Deploy resources related to Gateway | bool | `true` |
 | gateway.fullnameOverride | String to fully override gateway.fullname | string | `""` |
 | gateway.gatewayClassName | Gateway class that determines the backend used Currently supported values: "kgateway", "istio", or "gke-l7-regional-external-managed" | string | `"istio"` |
+| gateway.gatewayParameters.replicas | Number of replicas for the gateway | int | `1` |
 | gateway.gatewayParameters.resources | Resource requests/limits <br /> Ref: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-requests-and-limits-of-pod-and-container | object | `{"limits":{"cpu":"2","memory":"1Gi"},"requests":{"cpu":"100m","memory":"128Mi"}}` |
 | gateway.labels | Additional labels provided to the Gateway resource | object | `{}` |
 | gateway.listeners | Set of listeners exposed via the Gateway, also propagated to the Ingress if enabled | list | `[{"allowedRoutes":{"namespaces":{"from":"All"}},"name":"default","path":"/","port":80,"protocol":"HTTP"}]` |
